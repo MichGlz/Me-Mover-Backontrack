@@ -88,4 +88,10 @@ function vidCont() {
   videoIntro.playbackRate = 0.8;
   today = new Date().toISOString().substr(0, 10);
   document.querySelector("#date").value = today;
+  if (navigator.userAgent.indexOf("Chrome") != -1) {
+    document.querySelector('input[type="date"]').style.backgroundImage = "none";
+    document.querySelector('input[type="date"]').style.paddingLeft = "1rem";
+    document.querySelector('input[type="time"]').style.backgroundImage = "none";
+    document.querySelector('input[type="time"]').style.paddingLeft = "1rem";
+  }
 }

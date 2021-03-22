@@ -2,10 +2,12 @@ const div = document.querySelector(".img-container");
 const body = document.querySelector("body");
 const img = document.querySelector("img");
 const videoIntro = document.querySelector("video.intro");
+const menuSlide = document.querySelector(".menuSlide");
 let today;
 let date;
 
 window.addEventListener("resize", windowSize);
+document.querySelector(".burgerMenu").addEventListener("click", appear);
 vidCont();
 
 //-----------------star carousel--------
@@ -94,4 +96,8 @@ function vidCont() {
     document.querySelector('input[type="time"]').style.backgroundImage = "none";
     document.querySelector('input[type="time"]').style.paddingLeft = "1rem";
   }
+}
+
+function appear() {
+  menuSlide.classList.toggle("appear");
 }

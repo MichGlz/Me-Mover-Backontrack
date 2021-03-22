@@ -105,12 +105,11 @@ a {
   position: absolute;
   left: 100vw;
   background-color: ivory;
-  display: none;
-  transition: 0.8s ease-in-out;
+
+  transition-duration: 0.5s;
 }
 
 .appear {
-  display: block;
   transform: translateX(-100vw);
 }
 

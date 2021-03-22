@@ -21,6 +21,7 @@ header {
   position: fixed;
   padding: 0.5vw 2vw;
   z-index: 100;
+  box-shadow: 0 0 25px 3px;
 }
 nav {
   display: flex;
@@ -51,6 +52,24 @@ a {
   text-decoration-line: none;
 }
 
+.shopBtn {
+  background-color: var(--meMoverBlue);
+  border-style: none;
+  color: white;
+  font-weight: 600;
+  border-radius: 5px;
+  padding: 0.5rem 2rem;
+  font-size: 105%;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.shopBtn:hover {
+  color: var(--meMoverBlue);
+  background: white;
+  box-shadow: 0 0 20px 1px #373737;
+}
+
 .pagewraper {
   width: 100%;
   height: auto;
@@ -61,7 +80,7 @@ a {
 
 div.intro {
   margin-top: var(--headerHeight);
-  height: 260vh;
+  height: min(88vw, 1690px);
   width: min(100%, 1920px);
   position: relative;
   color: rgb(255, 255, 255);
@@ -82,13 +101,13 @@ div.intro {
 }
 
 .texto {
-  width: max(50%, 350px);
-  height: min(66.7%, 950px);
+  width: min(50vw, 960px);
+  height: min(50vw, 960px);
   position: absolute;
-  bottom: calc(32vh - 300px);
+  bottom: 0;
   right: 0;
   background-color: rgb(37, 37, 37);
-  padding-left: 4vw;
+  padding: 3% 0 0 4%;
 }
 
 h1 {
@@ -99,7 +118,8 @@ h1 {
   margin-top: 1rem;
 }
 
-h2 {
+h2,
+h2 span {
   font-family: var(--fontMain);
   font-size: calc(2rem + 2vw);
   text-align: center;
@@ -117,11 +137,15 @@ p {
   max-width: 29ch;
 }
 .texto h2 {
-  margin-top: 4vw;
   font-weight: 300;
   text-align: left;
-  letter-spacing: 1vw;
+  letter-spacing: 0.7vw;
 }
+
+h2 span {
+  margin-left: 10%;
+}
+
 .texto a {
   font-weight: bold;
   margin-top: 3vw;
@@ -132,6 +156,7 @@ p {
   font-size: 1.2rem;
   color: white;
   border-radius: 10px;
+  transition: 0.2s;
 }
 .texto a:hover {
   color: var(--meMoverBlue);
@@ -317,26 +342,50 @@ textarea {
   background: var(--meMoverBlue);
   color: white;
   font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
 }
 .tryOut button:hover {
   background: white;
   color: var(--meMoverBlue);
-  transition: 0.2s;
 }
 
 footer {
   height: 30vh;
   width: 100%;
   background: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+footer h3 {
+  margin: 0.8rem auto;
+}
+footer p {
+  margin: 0.5rem auto;
+  font-size: 1.2rem;
+  max-width: 45ch;
 }
 
 @media only screen and (max-width: 600px) {
+  div.intro {
+    height: 100vh;
+    background-image: url(/assets/poster.webp);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: -60vh;
+  }
+
+  .intro video {
+    display: none;
+  }
+
   .texto {
     width: 100vw;
     height: auto;
     padding: 2rem;
-    margin-bottom: 2rem;
   }
+
   .carousel-container {
     max-width: 1000px;
     margin: auto;

@@ -42,6 +42,23 @@ nav ul:last-child {
   justify-content: space-around;
 }
 
+.burgerMenu {
+  display: none;
+}
+
+.burgerMenu a {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  background-image: url(../assets/burgerMenu.webp);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.cross {
+  background-image: url(../assets/burgerMenu.webp);
+}
+
 .navLogo {
   height: calc(var(--headerHeight) - 1vh);
   width: auto;
@@ -68,6 +85,32 @@ a {
   color: var(--meMoverBlue);
   background: white;
   box-shadow: 0 0 20px 1px #373737;
+}
+
+.menuSlideContainer {
+  height: calc(100vh - var(--headerHeight));
+  width: 100vw;
+  position: fixed;
+  z-index: 5;
+  top: var(--headerHeight);
+  left: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.menuSlide {
+  all: initial;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 100vw;
+  background-color: ivory;
+
+  transition-duration: 0.5s;
+}
+
+.appear {
+  transform: translateX(-100vw);
 }
 
 .pagewraper {
@@ -225,6 +268,9 @@ section {
 
 .memover-text h2 span {
   font-size: 80%;
+}
+.memover-text p {
+  margin-left: calc(2rem + 2vw);
 }
 
 #videoBG {
@@ -392,7 +438,41 @@ footer p {
   max-width: 45ch;
 }
 
+@media only screen and (max-width: 1380px) {
+  div.intro {
+    background: white;
+  }
+
+  .texto {
+    width: min(75vw, 960px);
+    height: auto;
+    padding: 3% 0 3% 4%;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .menuHidden {
+    display: none;
+  }
+  .burgerMenu {
+    display: block;
+  }
+}
+
 @media only screen and (max-width: 600px) {
+  nav {
+    padding: 0 3rem 0 1rem;
+  }
+
+  nav ul {
+    width: 0;
+  }
+
+  nav ul:last-child {
+    width: 50px;
+    justify-content: none;
+  }
+
   div.intro {
     height: 100vh;
     background-image: url(/assets/poster.webp);

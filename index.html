@@ -16,7 +16,7 @@
       <nav>
         <ul>
           <li class="logo">
-            <a
+            <a href="https://me-mover.dk/"
               ><img
                 src="/assets/Logo.PNG"
                 alt="logotype me mover"
@@ -32,8 +32,12 @@
           </li>
         </ul>
         <ul>
-          <li><a>Login</a></li>
-          <li><button>Shop</button></li>
+          
+          <li>
+            <a href="https://me-mover.dk/product-category/shop/"
+              ><button class="shopBtn">Shop</button></a
+            >
+          </li>
         </ul>
       </nav>
     </header>
@@ -42,19 +46,20 @@
         <video
           class="intro"
           src="/assets/reelweb-v3.webm"
+          poster="/assets/poster.webp"
           autoplay
           muted
           loop
         ></video>
         <div class="texto">
-          <h2>ME-MOVER</h2>
+          <h2>Me-Mover <span>&#8595</span></h2>
           <h1>BACK ON TRACK</h1>
           <p>
             Success in life comes when you simply refuse to give up, with goals
-            so strong that obstacles, failure, and loss onlyact as motivation.
+            so strong that obstacles, failure, and loss only act as motivation.
           </p>
           <h3>#backontrack</h3>
-          <a>Learn More</a>
+          <a href="https://me-mover.dk/fysioterapeuter/">Learn More</a>
         </div>
       </div>
 
@@ -191,7 +196,7 @@
       </section>
       <section class="tryOut" id="tryOut">
         <h2>TRY OUT A ME-MOVER</h2>
-        <form name="try-out" autocomplete="on">
+        <form name="try-out" autocomplete="on" action="#tryOut">
           <label>
             Full Name *
             <input
@@ -239,11 +244,16 @@
             ></textarea>
           </label>
 
-          <button type="button">Submit</button>
+          <button type="submit">Submit</button>
         </form>
       </section>
     </div>
-    <footer></footer>
+    <footer>
+      <h3>Me-Mover ApS</h3>
+<p> Jægersborg Alle 1D, 2920 Charlottenlund, CVR: 41369698 – Tel: (+45)50222240 | info@me-mover.dk</p>
+
+<p> Åbent: 10:00 – 16:00 – Mandag til Fredag</p>
+    </footer>
     <script src="/js/index.js"></script>
   </body>
 </html>
